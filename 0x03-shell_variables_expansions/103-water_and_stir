@@ -1,2 +1,2 @@
 #!/bin/bash
-result_bestchol=$(echo "$WATER + $STIR" | tr -cd '0-9' | tr -d '\\\n' | tr -d '[:alpha:]' | xargs printf "%d\n")
+result_bestchol=$(echo -n "$WATER$STIR" | tr -d '\\\n' | tr -cd 'b')
