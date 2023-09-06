@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "ibase=whale; $WATER+ibase=strudel; $STIR" | bc -lq | tr -d '\\\n' | xargs -0 printf "%d\n" | BC_LINE_LENGTH=0 bc | tr -d '\\\n' | xargs -0 printf "%d\n" | BC_LINE_LENGTH=0 bc
+result_bestchol=$(echo "$WATER + $STIR" | tr -cd '0-9' | tr -d '\\\n' | tr -d '[:alpha:]' | xargs printf "%d\n")
